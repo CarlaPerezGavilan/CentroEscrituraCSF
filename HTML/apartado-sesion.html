@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>Tutorías en Español - Centro de Escritura</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			var listBrand = ['8:30', '9:00', '10:00', '14:30', '15:00'];
+			window.onload= myMain;
+									function myMain() {
+  									document.getElementById("myDiv").onclick = buton;
+									}
+
+										function buton(e) {
+										if (e.target.tagName == 'BUTTON') {
+											alert(e.target.id);
+										}
+										}
+			function printBtn() {
+				for (var i = 0; i < listBrand.length; i++) {
+					var btn = document.createElement("button");
+					var t = document.createTextNode(listBrand[i]);
+					btn.appendChild(t);
+					document.getElementById("myDIV").appendChild(btn);
+				}
+
+			}
+			function popup(){
+				var x = document.querySelector('.bg-modalCancelar').style.display = "flex";
+			}
+
+			function Close(){
+				var x = document.querySelector('.bg-modalCancelar').style.display = "none";
+			}
+
+			
+		</script>
+		<div class="bg-modalCancelar">
+			<div class="modal-contentCancelar">
+					<div class="textoPopUps">
+						<h1>Registro de Cita</h1>
+						<h10> <b> ¡Su Cita a quedado registrada!</b> <br>
+							Día: 25 abril 2019 <br>
+							Hora: 8:30 am<br>
+							Lugar: Centro De Escritura
+						</h10>
+					</div>
+					<div class = "close">
+						<button onclick="Close()">Aceptar</button>
+						<button onclick="Close()">Cancelar</button>
+					</div>
+			</div> 
+		</div> 
+
+	</head>
+	<body onload="printBtn()" class="is-preload">
+			<div id="wrapper">
+					<header id="header">
+						<div class="inner">
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/Tec.png" alt="" /></span><span class="title">Centro de Escritura</span>
+								</a>
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+					<nav id="menu">
+						<h2>Menú</h2>
+						<ul>
+							<li><a href="login.html">Cerrar Sesión</a></li>
+						</ul>
+					</nav>
+					<div id="main">
+						<div class="inner">
+							<header class = "headerNombre">
+								<h1> Alejandra Nissan</h1>
+								
+							</header>
+		<div id="myDIV">
+				
+						</div>
+					</div>
+				</div>
+
+					<button onclick= "popup()">Select</button>
+					<footer id="footer">
+					</footer>
+
+			</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/save.js"></script>
+			
+	</body>
+</html>

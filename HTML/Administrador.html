@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+			<meta charset="utf-8" />
+		<link rel = "stylesheet" type="text/css" href="assets/css/styles.css">
+		<link rel = "stylesheet" type="text/css" href="assets/css/main.css">
+    </head>
+			<body class="is-preload">
+				<!-- Wrapper -->
+					<div id="wrapper">
+		
+						<!-- Header -->
+							<header id="header">
+								<div class="inner">
+		
+									<!-- Logo -->
+										<a href="index.html" class="logo">
+											<span class="symbol"><img src="images/Tec.png" alt="" /></span><span class="title">Centro de Escritura</span>
+										</a>
+		
+									<!-- Nav -->
+										<nav>
+											<ul>
+												<li><a href="#menu">Menu</a></li>
+											</ul>
+										</nav>
+		
+								</div>
+							</header>
+		
+						<!-- Menu -->
+							<nav id="menu">
+								<h2>Menú</h2>
+								<ul>
+									<li><a href="login.html">Cerrar Sesión</a></li>
+									<li><a href="Administrador.html">Inicio</a></li>
+								</ul>
+							</nav>
+		
+						<!-- Main -->
+							<div id="main">
+								<div class="inner">
+										<h1>Agenda Mensual</h1>
+
+	<div class ="row">
+			<div class = "column">
+				<div class = "row2">
+					<div class = "column2">
+						<h3>Tutor:</h3>
+					</div>
+					<div class = "column3">
+						<input type="tutor" class= "textboxes" placeholder= "tutor">
+					</div>
+				</div>
+
+				<div class = "row2">
+						<div class = "column2">
+							<h3>Dia:</h3>
+						</div>
+						<div class = "column3">
+							<input type="dia" class= "textboxes" placeholder= "DD/MM/AAAA">
+						</div>
+					</div>
+
+			</div>
+			<div>
+				<div class = "column4">
+
+				</div>
+				
+			<div class= class = "searchbutton">
+					<button > Buscar</button>
+					<!-- <input type = "button" id = "btn" class = "btn" value = "Buscar"> -->
+				</div>
+			</div>                                
+
+			<div class ="column">
+				<div class = "row2">
+					<button class= "other" onclick = "AbrirSegunda()"> Eliminar citas seleccionadas</button>
+				</div>
+				<div class = "row2">
+					<button class ="other" onclick = "AbrirPrimera()">  Generar reporte de citas seleccionadas</button>
+				</div>
+			</div>
+		</div>
+
+	
+								</div>
+							</div>
+		
+		
+				<!-- Scripts -->
+					<script src="assets/js/jquery.min.js"></script>
+					<script src="assets/js/browser.min.js"></script>
+					<script src="assets/js/breakpoints.min.js"></script>
+					<script src="assets/js/util.js"></script>
+					<script src="assets/js/main.js"></script>
+					<script src="assets/js/table.js"></script>
+		
+			</body>
+		</html>
+		
+		
+    	
+<div class="bg-modal">
+			<div class="modal-content">
+					<div class="textoPopUps">
+						<h1>Envío de Reporte</h1>
+						<h10> Se enviaron los reportes de las sesiones seleccionadas al correo del profesor correspondiente</h10>
+					</div>
+					<div class = "close">
+						<button onclick="Prueba2()">Aceptar</button>
+					</div>
+			</div> 
+	</div> 
+		
+	<!--POP UP para Admin 2-->
+<div class="bg-modalEliminarCita1">
+	<div class="modal-contentEliminarCita1">
+					<div class="textoPopUps">
+						<h1>Cancelación de Sesión</h1>
+						<h10> ¿Desea cancelar la sesión impartida por Carla Pérez el 01/07/2019 a las 10:00?</h10>
+					</div>
+					<div>
+						<button  onclick="AbrirTercera()">Aceptar</button>
+						<button  onclick="CerrarCanc()">Cerrar</button>
+					</div>
+	</div> 
+</div> 
+	
+<!-- POP UP 3 -->
+<div class="bg-modalCancelar">
+	<div class="modal-contentCancelar">
+			<div class="textoPopUps">
+				<h1>Cancelación de Sesión</h1>
+				<h10> La sesión fue cancelada, se le enviará un correo al tutor y al alumno como notificación</h10>
+			</div>
+			<div class= "aceptar">
+				<button  onclick="Aceptar()">Aceptar</button>
+			</div>
+</div> 
+</div> 			
+
+<script>
+
+			function AbrirPrimera(){
+			var x = document.querySelector('.bg-modal').style.display = "flex";
+			}
+			function AbrirSegunda(){
+			var y = document.querySelector('.bg-modalEliminarCita1').style.display = "flex";
+				}
+			function AbrirTercera(){
+				var y = document.querySelector('.bg-modalCancelar').style.display = "flex";
+
+			}
+</script> 
+
+		<script>
+				function Reporte(){
+					document.querySelector('.bg-modal').style.display = "flex";
+					
+				}
+			</script> 
+
+<script>
+		function Prueba2(){
+			document.querySelector('.bg-modal').style.display = "none";
+			
+		}
+	</script> 
+
+
+
+<script>
+		function Aceptar(){
+			var x = document.querySelector('.bg-modalEliminarCita1').style.display = "none";
+			var y = document.querySelector('.bg-modal').style.display = "none";
+		}
+	</script> 
+
+<script>
+		function CerrarCanc(){
+			var x = document.querySelector('.bg-modalEliminarCita1').style.display = "none";
+			var y = document.querySelector('.bg-modal').style.display = "none";
+		}
+		function Aceptar(){
+			var x = document.querySelector('.bg-modalCancelar').style.display = "none";
+			var y = document.querySelector('.bg-modal').style.display = "none";
+			var z = document.querySelector('.bg-modalEliminarCita1').style.display = "none";
+		}
+	</script> 
+<input type='checkbox'/>
+<table id= "table" class="tg" >
+		<colgroup>
+		<col style="width: 45px">
+		<col style="width: 183px">
+		<col style="width: 183px">
+		<col style="width: 168px">
+		<col style="width: 151px">
+		</colgroup>
+		  <tr>
+			<th class="tg-47s2"></th>
+			<th class="tg-i9vi"><span>Martrícula Alumno</span></th>
+			<th class="tg-i9vi">Matrícula Tutor</th>
+			<th class="tg-i9vi">Fecha</th>
+			<th class="tg-i9vi">Hora</th>
+		  </tr>
+		  <tr>
+			<td class="tg-i9vi"> 
+					<input type='checkbox' name='thing' value='valuable' id="thing"/><label for="thing"></label>
+			</td>
+			<td class="tg-i9vi">A02019321</td>
+			<td class="tg-i9vi">L01239123</td>
+			<td class="tg-i9vi">01/08/2019</td>
+			<td class="tg-i9vi">10:00</td>
+		  </tr>
+		  <tr>
+			<td class="tg-i9vi">
+					<input type='checkbox' name='thing' value='valuable' id="thing1"/><label for="thing1"></label>
+			</td>
+			<td class="tg-i9vi">A01025406</td>
+			<td class="tg-i9vi">L01239433</td>
+			<td class="tg-i9vi">05/08/2019</td>
+			<td class="tg-i9vi">11:00</td>
+		  </tr>
+		  <tr>
+			<td class="tg-i9vi">
+					<input type='checkbox' name='thing' value='valuable' id="thing2"/><label for="thing2"></label>
+			</td>
+			<td class="tg-i9vi">A01023033</td>
+			<td class="tg-i9vi">L012391332</td>
+			<td class="tg-i9vi">06/08/2019</td>
+			<td class="tg-i9vi">13:00</td>
+		  </tr>
+		  <tr>
+			<td class="tg-47s2">
+					<input type='checkbox' name='thing' value='valuable' id="thing3"/><label for="thing3"></label>
+			</td>
+			<td class="tg-i9vi">A01023333</td>
+			<td class="tg-i9vi">L01012578</td>
+			<td class="tg-i9vi">07/08/2019</td>
+			<td class="tg-i9vi">12:30</td>
+		  </tr>
+		  <tr>
+			<td class="tg-47s2">
+					<input type='checkbox' name='thing' value='valuable' id="thing4"/><label for="thing4"></label>
+			</td class="tg-i9vi">
+			<td class="tg-i9vi">A01023456</td>
+			<td class="tg-i9vi">L010323904</td>
+			<td class="tg-i9vi">21/08/201</td>
+			<td class="tg-i9vi">10:00p</td>
+		  </tr>
+		</table>
+		<style type="text/css">
+			.tg  {margin-left: 0px; border-spacing:50}
+			.tg td{font-size:20px;padding:10px 50px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+			.tg th{font-size:20px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+			.tg .tg-47s2{background-color:#343434;border-color:#ffffff;text-align:center;vertical-align:top}
+			.tg .tg-i9vi{background-color:#343434;color:#ffffff;border-color:#ffffff;text-align:center;vertical-align:top}
+			.tg .tg-5sln{font-size:15px;background-color:#343434;color:#ffffff;border-color:#ffffff;text-align:center;vertical-align:top}
+			</style>
+</body>
+
+						<!-- Footer -->
+						<footer id="footer" style="background-color:rgba(35, 35, 36, 0.795)">
+								<div style="background-color:rgba(35, 35, 36, 0.795)">
+								</div>
+							</footer>
+					</div>
+
+</html>
